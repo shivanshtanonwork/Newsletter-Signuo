@@ -32,11 +32,11 @@ app.post('/', (req,res) => {
   }
   const jsonData = JSON.stringify(data)
 
-  const url = "https://us1.api.mailchimp.com/3.0/lists/8e04311fd4"
+  const url = "https://us1.api.mailchimp.com/3.0/lists/{unique-id}"
 
   const options = {
     method: "POST",
-    auth: "shivansh1:91fb37289227ff4e4f65a17213b8b630-us1"
+    auth: "shivansh1:{api-key}"
   }
 
 const request = https.request(url, options, (response) => {
@@ -66,8 +66,4 @@ app.listen(port || 3000, () => {
 })
 
 
-//API key
-// 222680d96dd8fe21387dda40e6af805c-us1
 
-//List ID
-// 8e04311fd4
